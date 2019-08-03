@@ -79,12 +79,18 @@
 <script>
 export default {
   name: "app",
+  data() {
+    return {
+      results: [],
+    }
+  },
   methods: {
     search() {
       fetch("http://localhost:18081/admin/api/staff")
         .then(response => response.json())
         .then(myJson => {
-          console.log(JSON.stringify(myJson));
+          this.results = myJson.data;
+          console.log(this.results);
         });
     }
   }
