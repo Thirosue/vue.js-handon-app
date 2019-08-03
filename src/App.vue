@@ -39,39 +39,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
+            <tr v-for="(staff, index) in results" :key="staff.id">
+              <td>{{index+1}}</td>
               <td>
-                <a href="#" class>1</a>
+                <a href="#" class>{{staff.id}}</a>
               </td>
-              <td>john</td>
-              <td>doe</td>
-              <td>test@rexev.com</td>
-              <td>09011112222</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                <a href="#" class>2</a>
-              </td>
-              <td>john</td>
-              <td>doe</td>
-              <td>test@rexev.com</td>
-              <td>09011112222</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                <a href="#" class>3</a>
-              </td>
-              <td>john</td>
-              <td>doe</td>
-              <td>test@rexev.com</td>
-              <td>09011112222</td>
+              <td>{{staff.firstName}}</td>
+              <td>{{staff.lastName}}</td>
+              <td>{{staff.email}}</td>
+              <td>{{staff.tel}}</td>
             </tr>
           </tbody>
         </table>
       </section>
+      {{results}}
     </div>
   </div>
 </template>
@@ -81,8 +62,8 @@ export default {
   name: "app",
   data() {
     return {
-      results: [],
-    }
+      results: []
+    };
   },
   methods: {
     search() {
