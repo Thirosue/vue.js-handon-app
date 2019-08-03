@@ -53,7 +53,7 @@
               <th>Tel</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody is="transition-group">
             <tr v-for="(staff, index) in results" :key="staff.id">
               <td>{{index+1}}</td>
               <td>
@@ -103,6 +103,9 @@ export default {
 </script>
 
 <style>
+.v-move {
+  transition: transform 1s;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
