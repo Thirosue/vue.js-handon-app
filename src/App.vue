@@ -12,7 +12,7 @@
         <div class="field sample-vue-app-input-firstName">
           <label for="firstName" class="label">名前</label>
           <div class="control">
-            <input type="text" id="firstName" name="firstName" class="input" />
+            <input v-model="firstName" type="text" id="firstName" name="firstName" class="input" />
           </div>
         </div>
         <div class="field sample-vue-app-input-lastName">
@@ -62,12 +62,14 @@ export default {
   name: "app",
   data() {
     return {
+      firstName: '',
       results: []
     };
   },
   methods: {
     search() {
-      fetch("http://localhost:18081/admin/api/staff")
+      console.log(this.firstName);
+      fetch("http://localhost:18081/admin/api/staff?firstName=" + this.firstName)
         .then(response => response.json())
         .then(myJson => {
           this.results = myJson.data;
