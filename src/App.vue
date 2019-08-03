@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="field is-grouped is-grouped-right">
-          <button id="form-submit" type="submit" class="button is-link">Search</button>
+          <button @click="search" id="form-submit" type="submit" class="button is-link">Search</button>
         </div>
       </div>
       <hr />
@@ -79,6 +79,11 @@
 <script>
 export default {
   name: "app",
+  methods: {
+    search() {
+      window.alert('search');
+    }
+  }
 };
 </script>
 
