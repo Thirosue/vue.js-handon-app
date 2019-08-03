@@ -31,4 +31,9 @@ describe('App.vue', () => {
     expect(resultList.length).not.toEqual(0) //0 以上
     console.log(resultList.at(2).text())
   })
+
+  it("snapshot", () => {
+    const wrapper = shallowMount(App)
+    expect(wrapper.vm.$el).toMatchSnapshot()
+  })
 })

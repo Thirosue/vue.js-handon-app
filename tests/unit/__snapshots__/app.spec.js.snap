@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue snapshot 1`] = `
+<div
+  id="app"
+>
+  <section
+    class="hero"
+  >
+    <div
+      class="hero-body"
+    >
+      <div
+        class="container"
+      >
+        <h1
+          class="title"
+        >
+          担当者一覧
+        </h1>
+      </div>
+    </div>
+  </section>
+   
+  <div
+    class="container is-fullhd"
+  >
+    <div
+      class="notification"
+    >
+      <div
+        class="field sample-vue-app-input-firstName"
+      >
+        <label
+          class="label"
+          for="firstName"
+        >
+          名前
+        </label>
+         
+        <div
+          class="control"
+        >
+          <input
+            class="input"
+            id="firstName"
+            name="firstName"
+            type="text"
+          />
+        </div>
+      </div>
+       
+      <div
+        class="field sample-vue-app-input-lastName"
+      >
+        <label
+          class="label"
+          for="lastName"
+        >
+          苗字
+        </label>
+         
+        <div
+          class="control"
+        >
+          <input
+            class="input"
+            id="lastName"
+            name="lastName"
+            type="text"
+          />
+        </div>
+      </div>
+       
+      <div
+        class="field is-grouped is-grouped-right"
+      >
+        <p
+          class="control"
+        >
+          <button
+            class="button is-link"
+            id="form-submit"
+            type="submit"
+          >
+            Search
+          </button>
+        </p>
+         
+        <p
+          class="control"
+        >
+          <button
+            class="button is-link"
+            type="submit"
+          >
+            Shuffle
+          </button>
+        </p>
+      </div>
+    </div>
+     
+    <hr />
+     
+    <section
+      class="hero"
+      id="result-list"
+    >
+      <!---->
+    </section>
+    
+    []
+  
+  </div>
+</div>
+`;
