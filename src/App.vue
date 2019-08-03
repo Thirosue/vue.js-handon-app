@@ -29,7 +29,12 @@
           </div>
         </div>
         <div class="field is-grouped is-grouped-right">
-          <button @click="search" id="form-submit" type="submit" class="button is-link">Search</button>
+          <p class="control">
+            <button @click="search" id="form-submit" type="submit" class="button is-link">Search</button>
+          </p>
+          <p class="control">
+            <button @click="shuffle" type="submit" class="button is-link">Shuffle</button>
+          </p>
         </div>
       </div>
       <hr />
@@ -68,6 +73,8 @@
 </template>
 
 <script>
+import _ from 'lodash';
+
 export default {
   name: "app",
   data() {
@@ -77,6 +84,9 @@ export default {
     };
   },
   methods: {
+    shuffle() {
+      this.results = _.shuffle(this.results);
+    },
     search() {
       console.log(this.firstName);
       fetch(
