@@ -27,7 +27,7 @@
       </div>
       <hr />
       <section class="hero">
-        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <table v-if="0 < results.length" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>#</th>
