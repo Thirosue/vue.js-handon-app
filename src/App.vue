@@ -12,7 +12,14 @@
         <div class="field sample-vue-app-input-firstName">
           <label for="firstName" class="label">名前</label>
           <div class="control">
-            <input v-model="firstName" type="text" id="firstName" name="firstName" class="input" />
+            <input
+              @keydown.enter="search"
+              v-model="firstName"
+              type="text"
+              id="firstName"
+              name="firstName"
+              class="input"
+            />
           </div>
         </div>
         <div class="field sample-vue-app-input-lastName">
@@ -27,7 +34,10 @@
       </div>
       <hr />
       <section class="hero">
-        <table v-if="0 < results.length" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <table
+          v-if="0 < results.length"
+          class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+        >
           <thead>
             <tr>
               <th>#</th>
@@ -62,14 +72,16 @@ export default {
   name: "app",
   data() {
     return {
-      firstName: '',
+      firstName: "",
       results: []
     };
   },
   methods: {
     search() {
       console.log(this.firstName);
-      fetch("http://localhost:18081/admin/api/staff?firstName=" + this.firstName)
+      fetch(
+        "http://localhost:18081/admin/api/staff?firstName=" + this.firstName
+      )
         .then(response => response.json())
         .then(myJson => {
           this.results = myJson.data;
