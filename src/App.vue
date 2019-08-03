@@ -38,7 +38,7 @@
         </div>
       </div>
       <hr />
-      <section class="hero">
+      <section id="result-list" class="hero">
         <table
           v-if="0 < results.length"
           class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
