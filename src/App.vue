@@ -81,7 +81,11 @@ export default {
   name: "app",
   methods: {
     search() {
-      window.alert('search');
+      fetch("http://localhost:18081/admin/api/staff")
+        .then(response => response.json())
+        .then(myJson => {
+          console.log(JSON.stringify(myJson));
+        });
     }
   }
 };
